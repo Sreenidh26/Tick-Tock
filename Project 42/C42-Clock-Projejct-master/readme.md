@@ -1,3 +1,3 @@
-# Responsive Clock By Sreennidh
+# Responsive Clock By Sreenidh
 
 
