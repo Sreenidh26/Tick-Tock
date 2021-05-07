@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+    <meta charset="UTF-8">
+    <title>Responsive Clock By Setu</title>
+    <link rel="stylesheet" href="css/style.css">
+    </head>
+
+
+<body>
+
+    <div class="clock">
+        <div class="hour">
+            <div class="hr" id="hr"></div>
+        </div>
+        <div class="minute">
+            <div class="mn" id="mn"></div>
+        </div>
+        <div class="second">
+            <div class="sc" id="sc"></div>
+        </div>
+    </div>
+
+    <script>
+        const angle = 6;
+        const hr = document.getElementById("hr");
+        const mn = document.getElementById("mn");
+        const sc = document.getElementById("sc");
+        setInterval(function(){
+            let date = new Date();
+            let hour = date.getHours() * 30;
+            let minute = date.getMinutes() * angle;
+            let second = date.getSeconds() * angle;
+            hr.style.transform = `rotateZ(${hour+(minute/12)}deg)`;
+            mn.style.transform = `rotateZ(${minute}deg)`;
+            sc.style.transform = `rotateZ(${second}deg)`;
+        })
+    </script>
+
+</body>
+</html>
